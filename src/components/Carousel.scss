@@ -1,0 +1,143 @@
+
+.container {
+  position: relative;
+  border:solid 1px;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  max-height: 400px;
+}
+
+.carousel{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image{
+  position: relative;
+  flex-basis: 66.5%;
+  margin: 0;
+  min-height: 400px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.image img{
+  width: 100%;
+  height: 100%;
+}
+
+.mainImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 1s ease-in-out transform;
+}
+.slideOut{
+  transform: translateX(100%);
+}
+.slideIn {
+  transform: translateX(0%);
+}
+
+.navigation {
+  position: absolute;
+  cursor: pointer;
+  height: 100%;
+  width: 5%;
+  font-size: 20px;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  background-color: rgba(0,0,0,0);
+  opacity: .5;
+  background-repeat: repeat-x;
+}
+.navigation:hover{
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: .9;
+  background-image: linear-gradient(0deg,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+}
+
+.navigation span{
+  position: absolute;
+  top: 50%;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  border: solid 1px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.next {
+  right: 0;
+}
+.next span {
+  right: 0%;
+  margin-right: 5px;
+}
+.previous {
+  left: 0%
+}
+.previous > span{
+  left: 0%;
+  margin-left: 5px;
+}
+.list {
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 10%;
+}
+.list ol {
+  text-align: center;
+}
+.list li{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.active{
+  background-color: white !important;
+}
+
+.movieInfo {
+  flex-basis: 33.5%;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+  background: #a90329;
+  background: -moz-linear-gradient(top, #a90329 24%, #8f0222 47%, #6d0019 74%);
+  background: -webkit-linear-gradient(top, #a90329 24%,#8f0222 47%,#6d0019 74%);
+  background: linear-gradient(to bottom, #a90329 24%,#8f0222 47%,#6d0019 74%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+  min-height: 400px;
+  max-height: 400px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.movieTitle {
+  padding:10px;
+}
+.movieTitle h1{
+  font-size: 2rem;
+  margin-bottom:0;
+  color:white;
+}
+.movieDescription {
+  padding:10px;
+  font-size: 17px;
+  color: white;
+}
